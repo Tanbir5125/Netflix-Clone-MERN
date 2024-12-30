@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hero-bg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)),
+    url("hero.jpg");
+}
+
+.separator {
+  height: 0.5rem;
+  width: 100%;
+  background-image: linear-gradient(to right, rgba(218, 73, 141,0.6), rgba(229, 9, 20,0.5), rgba(218, 73, 141,0.6));
+}
+
+.separator::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.5rem;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.1) 20%,
+    rgba(0, 0, 0, 0.1) 30%,
+    rgba(0, 0, 0, 0) 30%,
+    rgba(0, 0, 0, 0) 70%,
+    rgba(0, 0, 0, 0.1) 70%,
+    rgba(0, 0, 0, 0.1) 80%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  z-index: 1;
+} 
+
+.shimmer {
+  animation: shimmer 2s infinite linear;
+  background: linear-gradient(to right, #2c2c2c 4%, #333 25%, #2c2c2c 36%);
+  background-size: 1000px 100%;
+}
+
+@keyframes shimmer {
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}
+
+.error-page--content::before {
+	background: radial-gradient(
+		ellipse at center,
+		rgba(0, 0, 0, 0.5) 0,
+		rgba(0, 0, 0, 0.2) 45%,
+		rgba(0, 0, 0, 0.1) 55%,
+		transparent 70%
+	);
+	bottom: -10vw;
+	content: "";
+	left: 10vw;
+	position: absolute;
+	right: 10vw;
+	top: -10vw;
+	z-index: -1;
+}
