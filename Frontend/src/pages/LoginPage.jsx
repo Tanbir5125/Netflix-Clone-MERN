@@ -6,7 +6,7 @@ export const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const {login} = useAuthStore();
+  const { login, isLoggingIn } = useAuthStore();
 
   const handleSignIn = (e) => {
     e.preventDefault();
@@ -50,8 +50,8 @@ export const LoginPage = () => {
                 />
               </div>
 
-              <button className="w-96 py-2 bg-red-600 text-white font-semibold rounded-md hover:bg-red-700">
-                Sign In
+              <button className="w-96 py-2 bg-red-600 text-white font-semibold rounded-md hover:bg-red-700" disabled={isLoggingIn} >
+                {isLoggingIn ? "Loading..." : "Sign In"  }
               </button>
             </div>
           </form>
