@@ -29,7 +29,7 @@ if(ENV_VARS.NODE_ENV === 'production'){
     app.use(express.static(Path.join(__dirname, '/Frontend/dist')))
 
     app.get('*', (req, res) => {
-        res.sendFile(path.resolve(__dirname, "Frontend", "dist", "index.html"));
+        res.sendFile(Path.resolve(__dirname, "Frontend", "dist", "index.html"));
     })
 }
 
