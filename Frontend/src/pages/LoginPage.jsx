@@ -28,29 +28,29 @@ export const LoginPage = () => {
 
           <form className="space-y-4" onSubmit={handleSignIn}>
             <div className="flex flex-col justify-center items-center gap-4">
-              <div>
+              
                 <input
                   type="email"
-                  className="w-96 px-3 py-2 mt-1 border border-gray-700 rounded-md bg-transparent text-white focus:outline-none focus:ring"
+                  className="w-full px-3 py-2 mt-1 border border-gray-700 rounded-md bg-transparent text-white focus:outline-none focus:ring"
                   placeholder="Email address"
                   id="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
-              </div>
+             
 
-              <div>
+              
                 <input
                   type="password"
-                  className="w-96 px-3 py-2 mt-1 border border-gray-700 rounded-md bg-transparent text-white focus:outline-none focus:ring"
+                  className="w-full px-3 py-2 mt-1 border border-gray-700 rounded-md bg-transparent text-white focus:outline-none focus:ring"
                   placeholder="••••••"
                   id="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />
-              </div>
+            
 
-              <button className="w-96 py-2 bg-red-600 text-white font-semibold rounded-md hover:bg-red-700" disabled={isLoggingIn} >
+              <button className="w-[80%] self-center py-2 bg-red-600 text-white font-semibold rounded-md hover:bg-red-700" disabled={isLoggingIn} >
                 {isLoggingIn ? "Loading..." : "Sign In"  }
               </button>
             </div>
