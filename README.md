@@ -1,6 +1,6 @@
 # 🎬 MERN Netflix Clone
 
-## Deply Link
+## Deploy Link
 ```bash
 https://netflix-clone-mern-4dca.onrender.com
 ```
